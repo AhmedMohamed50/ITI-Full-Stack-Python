@@ -1,8 +1,9 @@
 
-
+@import url('https://fonts.cdnfonts.com/css/lucida-unicode-calligraphy');
 
 p ,div, span {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
+    font-family: 'Lucida Unicode Calligraphy', sans-serif;
 }
 
 div h1 {
