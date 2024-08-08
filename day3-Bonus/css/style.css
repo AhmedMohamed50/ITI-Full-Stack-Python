@@ -1,0 +1,192 @@
+
+/* Reset Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Style */
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-gray {
+    background-color: gray;
+}
+
+
+/* Custom Style */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1% 0;
+}
+
+header a i{
+    color: white;
+    padding: 4px;
+}
+
+ul {
+    width: 50%;
+    list-style: none;
+}
+
+ul.icons {
+    width: 70%;
+}
+
+.right-header {
+    width: 20%;
+}
+
+/* navbar */
+nav {
+    background-color: black;
+    color: white;
+    padding: 2% 0;
+    position: sticky;
+    top: 0;
+    z-index: 11111111111111111;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 6px;
+    border-radius: 2px;
+}
+
+nav ul {
+    width: 65%;
+}
+
+nav a.home {
+    background-color: red;
+}
+
+/* Section */
+section {
+    background-image: url(../assests/background-image.jpg);
+    height: 470px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    z-index: 10; 
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+section div.description {
+    width: 40%;
+    color: white;
+    margin-top: 10%;
+    z-index: 5000;
+}
+
+section div.description h3 {
+    font-size: 25px;
+}
+
+section div.description p {
+    margin: 5% 0;
+}
+
+section div.description a {
+    display: inline-block;
+    color: white;
+    background-color: red;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+section div.image {
+    width: 40%;
+    margin-top: 11%;
+    z-index: 6000;
+}
+
+/* Arrows */
+.arrow-left {
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    background-color: rgb(157, 3, 3);
+    padding: 8px;
+    z-index: 5000;
+    border-radius: 5px;
+    color: white;
+}
+
+.arrow-right {
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    background-color: rgb(157, 3, 3);
+    padding: 8px;
+    z-index: 5000;
+    border-radius: 5px;
+    color: white;
+}
+
+
+body {
+    height: 5000px;
+}
+
+/* Drop down menu */
+.dropdown {
+    position: relative; 
+    display: inline-block; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 300px;
+    border: 1px solid red;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px 12px 8px;
+    z-index: 70000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.dropdown-list li{
+    display: block; 
+    padding: 8px 16px 8px 4px;
+}
+
+.dropdown-list li a {
+    color: white;  
+    text-decoration: none;
+}
+
+.dropdown-list li:hover {
+    background-color: red; 
+}
+
