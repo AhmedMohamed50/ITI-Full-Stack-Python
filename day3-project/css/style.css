@@ -559,7 +559,7 @@ form {
 }
 
 form input {
-    
+    color: white;
     background-color: #081b29;
     border: 2px solid #00abf0;
     padding: 16px;
@@ -584,6 +584,7 @@ form textarea {
 }
 
 .contact-us a {
+    position: relative;
     display: inline-block;
     background-color: #00abf0;
     border: 2px solid #00abf0;
@@ -594,6 +595,29 @@ form textarea {
     text-decoration: none;
     font-weight: 600;
     margin-top: 4%;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}
+
+.contact-us a:hover {
+    color: #00abf0;
+}
+
+.contact-us a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #081b29;
+    transition: .5s;
+    z-index: -1;
+}
+
+.contact-us a:hover::before {
+    width: 100%;
 }
 
 /* Footer */
@@ -611,12 +635,35 @@ form textarea {
 }
 
 .footer a {
+    position: relative;
     padding: 5px 10px;
     background-color: #00abf0;
     color: #081b29;
     border-radius: 8px;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
 } 
 
+.footer a:hover {
+    color: #00abf0;
+}
+
+.footer a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #081b29;
+    transition: .5s;
+    z-index: -1;
+}
+
+.footer a:hover::before {
+    width: 100%;
+}
 
 
 
