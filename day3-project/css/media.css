@@ -1,0 +1,93 @@
+
+
+@media (max-width: 767.98px) {
+    .navbar {
+        display: block;
+    }
+}
+
+@media (max-width: 1333px) {
+    span.home-imgHover {
+        right: 0px;
+        width: 470px;
+    }
+
+    .home-content {
+        width: 60%;
+    }
+
+    .home-content h1 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    span.home-imgHover {
+        right: 0px;
+        width: 350px;
+    }
+    .btn-box {
+        margin-bottom: 4%;
+    }
+
+    .home-content h1,
+    .home-content h3{
+        font-size: 20px !important;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    span.home-imgHover {
+        right: 0px;
+        width: 150px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .btn-box {
+        width: 220px !important;
+    }
+
+    .btn-box a {
+        width: 48% !important;
+    }
+
+    .home {
+        height: 550px !important;
+    }
+
+    .home-sci {
+        top: 110%;
+    }
+
+    /* my journey section */
+}
+
+@media (max-width: 500px) {
+
+    span.home-imgHover {
+        right: 0px;
+        width: 100px;
+    }
+    .btn-box {
+        margin-bottom: 4% !important;
+    }
+
+    .home {
+        height: 700px !important;
+    }
+
+    .home-sci {
+        top: 110%;
+    }
+    .home-content h1,
+    .home-content h3{
+        font-size: 20px !important;
+        margin-top: 10% !important;
+        
+    }
+}
