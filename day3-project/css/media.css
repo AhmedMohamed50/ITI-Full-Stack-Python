@@ -65,6 +65,41 @@
     }
 
     /* my journey section */
+    .journey-content {
+        flex-direction: column;
+    }
+    .journey-content {
+        flex-direction: column;
+        width: 900px;
+    }
+    .education {
+        width: 500px;
+        margin-bottom: 3%;
+    }
+
+    /* my skills */
+    .my-skills-content {
+        flex-direction: column;
+    }
+
+    .skills {
+        width: 450px;
+        margin-bottom: 3%;
+    }
+
+    /* Form */
+    .contact-us {
+        width: 100% !important;
+    }
+    
+    form {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    form input {
+        width: 49% !important;
+    }
 }
 
 @media (max-width: 500px) {
