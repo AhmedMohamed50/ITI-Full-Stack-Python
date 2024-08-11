@@ -61,7 +61,7 @@
     }
 
     .home-sci {
-        top: 110%;
+        top: 75%;
     }
 
     /* my journey section */
@@ -116,8 +116,16 @@
         height: 700px !important;
     }
 
+    .btn-box {
+        width: 210px !important;
+    }
+
+    .btn-box a {
+        width: 49% !important;
+    }
+
     .home-sci {
-        top: 110%;
+        top: 95%;
     }
     .home-content h1,
     .home-content h3{
