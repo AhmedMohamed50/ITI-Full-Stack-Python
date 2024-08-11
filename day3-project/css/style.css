@@ -312,6 +312,324 @@ body {
     opacity: .8;
 }
 
+/* About me Section */
+
+.about-me {
+    background-color: #193e58;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-size: 40px;
+    color: white;
+    padding: 25px 0 40px;
+}
+
+span {
+    color: #00abf0;
+}
+
+.about-me img {
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.about-me p {
+    padding: 0 10%;
+    margin: 20px 0 30px;
+}
+
+.about-me a {
+    position: relative;
+    display: inline-block;
+    color: #081b29;
+    width: 150px;
+    height: 100%;
+    background-color: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s;
+}
+
+.about-me a:hover {
+    color: #00abf0;
+}
+
+.about-me a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:#081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.about-me a:hover::before {
+    width: 100%;
+}
+
+/* My Journey Section */
+.journey {
+    background-color: #081b29;
+    padding: 2% 10% 5%;
+}
+
+.journey h2 {
+    text-align: center;
+    padding: 20px 0 40px;
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.journey-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education {
+    width: 48%;
+    padding: 1%;
+}
+
+.education-column {
+    position: relative;
+}
+
+.education-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 100%;
+    border-left: 2px solid #00abf0;
+}
+
+.education-content {
+    position: relative;
+    border: 2px solid #00abf0;
+    padding: 2%;
+    border-radius: 8px;
+    margin-top: 2%;
+}
+
+/* .education-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 100%;
+    border-left: 2px solid #00abf0;
+} */
+
+.education-content::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -23px;
+    width: 14px;
+    height: 13px;
+    background-color: #00abf0;
+    border-radius: 50%; 
+}
+
+.education-content h4 {
+    margin: 10px 0;
+}
+
+.education-content p {
+    opacity: .8;
+}
+
+span.journey-span {
+    position: relative;
+    margin-left: 3%;
+}
+
+span.journey-span::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 106%;
+    width: 10px;
+    height: 10px;
+    background-color: #00abf0;
+    border-radius: 50%;
+}
+
+/* My Skills */
+.my-skills {
+    background-color: #193e58;
+    padding: 2% 10% 5%;
+}
+
+.my-skills h2 {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.my-skills-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-skills {
+    width: 45%;
+}
+
+.left-skills h3 {
+    margin: 20px 0;
+}
+
+.skills {
+    padding: 2%;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+}
+
+.one-skill {
+    margin-bottom: 5%;
+}
+
+.one-skill div.scroll {
+    width: 100%;
+    height: 20px;
+    margin: 1% 0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    
+}
+
+.one-skill div.scroll p{
+    width: 90%;
+    height: 70%;
+    margin: 3px 1px;
+    /* border: 2px solid #00abf0; */
+    border-radius: 8px;
+    background-color: #00abf0;
+}
+
+.one-skill div.scroll-80 p{
+    width: 80%;
+}
+
+.one-skill div.scroll-65 p{
+    width: 65%;
+}
+
+.one-skill div.scroll-75 p{
+    width: 75%;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Contact US */
+.contact-us {
+    background-color: #081b29;
+    padding: 3% 10% 5%;
+}
+
+.contact-us h2 {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+form input {
+    
+    background-color: #081b29;
+    border: 2px solid #00abf0;
+    padding: 16px;
+    border-radius: 8px;
+    width: 49%;
+    margin-top: 4%;
+}
+
+form input::placeholder,
+form textarea {
+    color: white;
+}
+
+form textarea {
+    margin-top: 4%;
+    width: 100%;
+    height: 200px;
+    background-color: #081b29;
+    border: 2px solid #00abf0;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.contact-us a {
+    display: inline-block;
+    background-color: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    padding: 4px 25px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 4%;
+}
+
+/* Footer */
+.footer {
+    background-color: #193e58;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    padding: 2% 0;
+    opacity: .8;
+}
+
+.footer a {
+    padding: 5px 10px;
+    background-color: #00abf0;
+    color: #081b29;
+    border-radius: 8px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* KEYFRAMES ANIMATION */
 @keyframes showRight {
