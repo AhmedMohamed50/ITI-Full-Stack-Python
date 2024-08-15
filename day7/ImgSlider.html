@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Slider</title>
+    <style>
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides img {
+            width: 100%;
+            display: none;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        /* Navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides" >
+            <img src="../day1/assests/welcome-image.jpg" alt="Image 1" class="active" style="width: 300px; height: 300px;">
+            <img src="../day1/assests/google.png" alt="Image 2" style="width: 300px; height: 300px;">
+            <img src="../day1/assests/twitter-icon.png" alt="Image 3" style="width: 300px; height: 300px;">
+            <img src="../day1/assests/linkden-icon.png" alt="Image 4" style="width: 300px; height: 300px;">
+        </div>
+    
+        
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+        <script src="./js/script.js"></script>
+    </div>
+</body>
+</html>

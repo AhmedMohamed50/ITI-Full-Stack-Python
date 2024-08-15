@@ -79,6 +79,7 @@ var myArr = [2,1,3,2,7,2,8,4,3,6,10,9,12];
 // var maxNumber = Math.max(...myArr);
 // console.log(maxNumber)
 // var minNumber = Math.min(...myArr);
+// var minNumber = Math.min.apply(null, myArr);
 // console.log(minNumber)
 
 // •	• Use Array.from function to generate a copy from this array but
