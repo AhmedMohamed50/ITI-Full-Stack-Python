@@ -9,4 +9,4 @@ new_tasks = [{"task":"Quran", "completed":True}, {"task":"Salah", "completed":Tr
 # main.view_tasks(new_tasks)                  # method 1
 view_tasks(new_tasks)                         # method 2 and 3
 
-print(__name__)
+print(__name__) # __main__ => now i am running this file directly
