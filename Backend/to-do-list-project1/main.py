@@ -8,8 +8,37 @@ def add_task():
     tasks.append(task_info)
     # print(tasks)
 
+# def mark_task_complete():
+#     pass
+
 def mark_task_complete():
-    pass
+    # Method 1
+    # get list of incomplete tasks
+    incomplete_tasks = [task for task in tasks if task["completed"] == False]
+    
+    # Method 2
+    # incomplete_tasks = list(filter(lambda task: task["completed"] == False, tasks))
+
+    # Method 3
+    # incomplete_tasks = []
+    # for task in tasks:
+    # if task["completed"] == False:
+    # incomplete_tasks.append(task)
+    
+    # show incomplete tasks
+    for i, task in enumerate(incomplete_tasks):
+        print(f"{i+1}- {task['task']}")
+        print("-"*30)
+
+    # get task number from user
+    task_number = int(input("choose task to complete: "))
+    
+    # mark task as complete
+    incomplete_tasks[task_number - 1]["completed"] = True
+    print("task marked as complete")
+    # print(tasks)
+    # after change the list of incomplete_tasks to True the tasks list also changed because the two point to the same location in memory
+    
 
 def view_tasks():
     ...
