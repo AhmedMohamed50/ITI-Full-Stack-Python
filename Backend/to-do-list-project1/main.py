@@ -12,10 +12,10 @@ def add_task():
 #     pass
 
 def mark_task_complete():
-    # Method 1
     # get list of incomplete tasks
+    # Method 1
     incomplete_tasks = [task for task in tasks if task["completed"] == False]
-    
+
     # Method 2
     # incomplete_tasks = list(filter(lambda task: task["completed"] == False, tasks))
 
@@ -24,6 +24,17 @@ def mark_task_complete():
     # for task in tasks:
     # if task["completed"] == False:
     # incomplete_tasks.append(task)
+    
+    # Check if there are any incomplete tasks
+    if not incomplete_tasks:
+        print("All tasks are already completed.")
+        print("-"*30)
+        return
+    
+    # if len(incomplete_tasks) == 0:
+    #     print("All tasks are already completed.")
+    #     print("-"*30)
+    #     return
     
     # show incomplete tasks
     for i, task in enumerate(incomplete_tasks):
@@ -41,7 +52,22 @@ def mark_task_complete():
     
 
 def view_tasks():
-    ...
+    if not tasks: 
+        print("no tasks to view")
+        return
+
+    for i, task in enumerate(tasks):
+        status = "✔" if task["completed"] else "❌"
+        
+        # status = "✅" if task["completed"] else "❌"
+        # if task["completed"]:
+        #   status = "✅"
+        # else:
+        #   status = "❌"
+        
+        print(f"{i+1}. {task['task']} {status}")
+        print('-'*30)
+
 
 message = """1 - add task to list
 2 - mark task as complete
