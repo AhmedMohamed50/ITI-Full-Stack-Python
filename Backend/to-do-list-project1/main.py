@@ -1,12 +1,12 @@
 
 def add_task():
     # get task from user
-    # define status
-    # add task to the list of tasks
-    
     task = input("Enter new task: ")
-    tasks.append(task)
-    print(tasks)
+    # define status
+    task_info = {"task": task, "completed" : False}
+    # add task to the list of tasks
+    tasks.append(task_info)
+    # print(tasks)
 
 def mark_task_complete():
     pass
