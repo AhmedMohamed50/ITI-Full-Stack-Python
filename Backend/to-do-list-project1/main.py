@@ -1,7 +1,9 @@
+import json
 
-tasks = []
+# tasks = []
 
 def main():
+    load_tasks_from_json()  # Load tasks when the program starts
     message = """1 - add task to list
     2 - mark task as complete
     3 - view tasks
@@ -18,6 +20,7 @@ def main():
         elif choice == "3":
             view_tasks(tasks)
         elif choice == "4":
+            save_tasks_to_json()  # Save tasks before quitting
             break
         else:
             print("Invalid choice, please enter a number between 1 and 4.")
@@ -103,6 +106,28 @@ def view_tasks(tasks):
 
         print(f"{i+1}. {task['task']} {status}")
         print('-'*30)
+
+def save_tasks_to_json(filename="tasks.json"):
+    try:
+        with open(filename, "w") as json_file:
+            json.dump(tasks, json_file, indent=4)
+        print(f"Tasks saved to {filename}")
+    except Exception as e:
+        print(f"Error saving tasks to {filename}: {e}")
+
+
+def load_tasks_from_json(filename="tasks.json"):
+    global tasks
+    try:
+        with open("tasks.json", "r") as json_file:
+            tasks = json.load(json_file)
+        print("Tasks loaded successfully")
+
+    except FileNotFoundError:
+        print(f"No previous task file found. Starting fresh.")
+
+    except Exception as e:
+        print(f"Error loading tasks from {filename}: {e}")
 
 if __name__ == "__main__":
     main()
