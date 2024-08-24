@@ -1,0 +1,42 @@
+/* Reset Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+/* Global Style */
+:root {
+    --emperor: #534a4b;
+    --brown: #cc876e;
+    transition: all 0.5s ease-in-out;
+}
+body {
+    line-height: 1.5;
+    position: relative;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.container {
+    width: 90vw;
+    margin: 0 auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Custom Style */
+
+
+
