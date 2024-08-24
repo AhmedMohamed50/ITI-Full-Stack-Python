@@ -11,6 +11,15 @@ toggleBtn.addEventListener('click', function(){
     }
     else {
         toggleBtn.firstElementChild.className = "fa-solid fa-bars";
-        document.body.style.overflow = "hidden"
+        document.body.style.overflow = "visible"
     }
+})
+
+// stopping animation & transition during window resizing
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        document.body.classList.remove("resize-animation-stopper");
+    }, 400);
 })
