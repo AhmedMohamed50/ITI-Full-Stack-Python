@@ -6,25 +6,6 @@ const repeat_password_input = document.getElementById('repeat-password-input')
 const phone_input = document.getElementById('phone-input')
 const error_message = document.getElementById('error-message')
 
-// form.addEventListener('submit', (e) => {
-//   let errors = []
-
-//   if(firstname_input){
-//     // If we have a firstname input then we are in the signup
-//     errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
-//   }
-//   else{
-//     // If we don't have a firstname input then we are in the login
-//     errors = getLoginFormErrors(email_input.value, password_input.value)
-//   }
-
-//   if(errors.length > 0){
-//     // If there are any errors
-//     e.preventDefault()
-//     error_message.innerText  = errors.join(". ")
-//   }
-// })
-
 form.addEventListener('submit', (e) => {
   e.preventDefault(); // login not redirect to home page
   let errors = []
