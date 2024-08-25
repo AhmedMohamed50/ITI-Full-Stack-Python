@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img Slider</title>
+    <style>
+        /* styles.css */
+        .slider {
+            position: relative;
+            overflow: hidden; /* Hide overflow content */
+            width: 100%; 
+        }
+
+        .slides {
+            display: flex; 
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        .products-item {
+            min-width: 100%; /* Each item takes full width of slider */
+            box-sizing: border-box; /* Include padding and border in width */
+            text-align: center;
+        }
+
+        .prev, .next {
+            z-index: 10000026;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+    <body>
+        <section id="products" class="products">
+            <div class="container">
+                <div class="products-wrapper">
+                    <h2 class="products-title">Sony Products</h2>
+        
+                    <div class="slider">
+                        <div class="slides products-item-wrapper">
+                            <!-- Product items for Slider 1 -->
+                            <div class="products-item active">
+                                <img src="./images/Sony-WH-1000XM4-B.png" alt="product image">
+                                <div class="products-info">
+                                    <h4>Sony HeadPhone</h4>
+                                    <div class="ratings">
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                    </div>
+                                    <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones...</p>
+                                    <h4>Price: $350.00</h4>
+                                </div>
+                                <button type="button" class="new-btn">New</button>
+                                <button type="button" class="add-btn">Add to Cart</button>
+                            </div>
+                            <!-- More product items -->
+                        <!-- Slider 1 -->
+                            <div class="products-item">
+                                <img src="./images/Sony-WH-1000XM4-W.png" alt="product image">
+                                <div class="products-info">
+                                    <h4>Sony HeadPhone</h4>
+                                    <div class="ratings">
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                    </div>
+                                    <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones...</p>
+                                    <h4>Price: $350.00</h4>
+                                </div>
+                                <button type="button" class="new-btn">New</button>
+                                <button type="button" class="add-btn">Add to Cart</button>
+                            </div>
+                            
+                            <div class="products-item">
+                                <img src="./images/Sony-WH-1000XM4-B.png" alt="product image">
+                                <div class="products-info">
+                                    <h4>Sony HeadPhone</h4>
+                                    <div class="ratings">
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                    </div>
+                                    <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones...</p>
+                                    <h4>Price: $350.00</h4>
+                                </div>
+                                <button type="button" class="new-btn">New</button>
+                                <button type="button" class="add-btn">Add to Cart</button>
+                            </div>
+
+                            <div class="products-item">
+                                <img src="./images/Sony-WH-1000XM4-W.png" alt="product image">
+                                <div class="products-info">
+                                    <h4>Sony HeadPhone</h4>
+                                    <div class="ratings">
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                        <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                    </div>
+                                    <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones...</p>
+                                    <h4>Price: $350.00</h4>
+                                </div>
+                                <button type="button" class="new-btn">New</button>
+                                <button type="button" class="add-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+                
+        <script src="./js/slider.js"></script>
+    </body>
+</html>
+

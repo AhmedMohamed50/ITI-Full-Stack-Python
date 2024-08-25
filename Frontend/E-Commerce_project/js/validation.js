@@ -3,6 +3,7 @@ const firstname_input = document.getElementById('firstname-input')
 const email_input = document.getElementById('email-input')
 const password_input = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
+const phone_input = document.getElementById('phone-input')
 const error_message = document.getElementById('error-message')
 
 // form.addEventListener('submit', (e) => {
@@ -25,17 +26,19 @@ const error_message = document.getElementById('error-message')
 // })
 
 form.addEventListener('submit', (e) => {
+  e.preventDefault(); // login not redirect to home page
   let errors = []
 
   if(firstname_input){
     // If we have a firstname input then we are in the signup
-    errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
+    errors = getSignupFormErrors(firstname_input.value, phone_input.value, email_input.value, password_input.value, repeat_password_input.value)
 
     if(errors.length === 0){
       const signupData = {
         firstname: firstname_input.value,
         email: email_input.value,
-        password: password_input.value
+        password: password_input.value,
+        phone: phone_input.value
       }
       localStorage.setItem('signupData', JSON.stringify(signupData))
       alert('Signup data stored successfully')
@@ -56,7 +59,9 @@ form.addEventListener('submit', (e) => {
         localStorage.setItem('userFirstname', storedSignupData.firstname)
 
         // Redirect to the home page
+        alert("before")
         window.location.href = 'index.html';
+        alert("after")
       } else {
         errors.push('Invalid email or password')
         email_input.parentElement.classList.add('incorrect')
@@ -72,7 +77,7 @@ form.addEventListener('submit', (e) => {
 })
 
 
-function getSignupFormErrors(firstname, email, password, repeatPassword){
+function getSignupFormErrors(firstname, phone, email, password, repeatPassword){
   let errors = []
 
   if(firstname === '' || firstname == null){
@@ -99,6 +104,18 @@ function getSignupFormErrors(firstname, email, password, repeatPassword){
     password_input.parentElement.classList.add('incorrect')
     repeat_password_input.parentElement.classList.add('incorrect')
   }
+  // Phone number validation using a regular expression for a basic 10-digit format
+  // const phoneRegex = /^[0-9]{10}$/;
+    // Phone number validation using a regular expression for a 11-digit format
+  const phoneRegex = /^01[0-2,5]\d{8}$/;
+  
+  if (phone === '' || phone == null) {
+    errors.push('Phone number is required')
+    phone_input.parentElement.classList.add('incorrect')
+  } else if (!phoneRegex.test(phone)) {
+    errors.push('Phone number must be a valid 11-digit number')
+    phone_input.parentElement.classList.add('incorrect')
+  }
 
 
   return errors;
@@ -119,7 +136,8 @@ function getLoginFormErrors(email, password){
   return errors;
 }
 
-const allInputs = [firstname_input, email_input, password_input, repeat_password_input].filter(input => input != null)
+// Clear error messages when user types again
+const allInputs = [firstname_input, email_input, password_input, repeat_password_input, phone_input].filter(input => input != null)
 
 allInputs.forEach(input => {
   input.addEventListener('input', () => {

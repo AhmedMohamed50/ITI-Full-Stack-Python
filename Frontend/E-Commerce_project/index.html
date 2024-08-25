@@ -1,322 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Project</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/regular.min.css" integrity="sha512-j+P0XpTXw+hDTK64xqC/cjv62cf629/IR4/0bokmich7J8XdVlWT40+1M/Z58rCQ4F+3QoJIfzh6Ui6TTIP6WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- custom style -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header" id="home">
-        <!-- navbar -->
-        <nav class="navbar container ">
-            <a href="#index.html" class="navbar-brand">
-                <i class="fa-solid fa-headphones"></i>
-                SonySound
-            </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Commerce Project</title>
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/regular.min.css" integrity="sha512-j+P0XpTXw+hDTK64xqC/cjv62cf629/IR4/0bokmich7J8XdVlWT40+1M/Z58rCQ4F+3QoJIfzh6Ui6TTIP6WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom style -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="home">
+            <!-- navbar -->
+            <nav class="navbar container ">
+                <a href="#index.html" class="navbar-brand">
+                    <i class="fa-solid fa-headphones"></i>
+                    SonySound
+                </a>
 
-            <div class="navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link">features</a></li>
-                    <li class="nav-item"><a href="#products" class="nav-link">product</a></li>
-                    <li class="nav-item"><a href="#reviews" class="nav-link">reviews</a></li>
-                </ul>
-            </div>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link">features</a></li>
+                        <li class="nav-item"><a href="#products" class="nav-link">product</a></li>
+                        <li class="nav-item"><a href="#reviews" class="nav-link">reviews</a></li>
+                    </ul>
+                </div>
 
-            <div class="navbar-extra-content">
-                <div class="nav-btns">
-                    <a href="./login.html">
-                        <button type="button" id="login-button">
-                            <i class="fa-solid fa-circle-user"></i>
-                            Login
+                <div class="navbar-extra-content">
+                    <div class="nav-btns">
+                        <a href="./login.html">
+                            <button type="button" id="login-button">
+                                <i class="fa-solid fa-circle-user"></i>
+                                Login
+                            </button>
+                        </a>
+                        <button type="button" class="order-button" id="order-button">
+                            Order Now
                         </button>
-                    </a>
-                    <button type="button" class="order-button" id="order-button">
+                    </div>
+                    <ul class="nav-icons">
+                        <span class="center">
+                            <i class="fab fa-instagram"></i>
+                        </span>
+                        <span class="center">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                        <span class="center">
+                            <i class="fab fa-facebook"></i>
+                        </span>
+                        <span class="center">
+                            <i class="fas fa-shopping-bag"></i>
+                        </span>
+                    </ul>
+                </div>
+
+                <button type="button" class="navbar-toggler center" id="navbar-toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+            <!-- end of navbar -->
+
+            <div class="header-banner container">
+                <div>
+                    <h3>Sony WH-1000xM4</h3>
+                    <h1 class="header-banner-title">
+                        wireless noise canceling headphones
+                    </h1>
+                    <button type="button" class="btn-trans order-button" id="header-order-button">
                         Order Now
                     </button>
                 </div>
-                <ul class="nav-icons">
-                    <span class="center">
-                        <i class="fab fa-instagram"></i>
-                    </span>
-                    <span class="center">
-                        <i class="fab fa-twitter"></i>
-                    </span>
-                    <span class="center">
-                        <i class="fab fa-facebook"></i>
-                    </span>
-                    <span class="center">
-                        <i class="fas fa-shopping-bag"></i>
-                    </span>
-                </ul>
             </div>
-
-            <button type="button" class="navbar-toggler center" id="navbar-toggler">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
-        <!-- end of navbar -->
-
-        <div class="header-banner container">
-            <div>
-                <h3>Sony WH-1000xM4</h3>
-                <h1 class="header-banner-title">
-                    wireless noise canceling headphones
-                </h1>
-                <button type="button" class="btn-trans order-button" id="header-order-button">
-                    Order Now
-                </button>
-            </div>
-        </div>
-    </header>
-    <!-- End of Header -->
+        </header>
+        <!-- End of Header -->
 
 
-    <!-- features -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="features-wrapper">
-                <!-- item -->
-                <div class="features-item">
-                    <span class="features-icon">
-                        <i class="fa-solid fa-volume-high"></i>
-                    </span>
-                    <h2 class="features-title">
-                        Industry-leading noise cancelation
-                    </h2>
-                    <p class="text">
-                        Industry-leading noise cancellation technology means you hear every word, note, and tune with incredible clarity, no matter your environment. These noise canceling headphones feature additional microphones that assist in isolating sound for a reduction of even more high and mid frequency sounds.
-                    </p>
-                </div>
-                <!-- end of item -->
-
-                <!-- item -->
-                <div class="features-item">
-                    <span class="features-icon">
-                        <i class="fa-solid fa-headset"></i>
-                    </span>
-                    <h2 class="features-title">
-                        Optimizing noise canceling
-                    </h2>
-                    <p class="text">
-                        To maximize noise-canceling performance, the WH-1000XM4 headphones incorporate two technologies: Personal Noise-Canceling Optimizer, designed specifically for you, and Atmospheric Pressure Optimizing, designed specifically for air travel.
-                    </p>
-                </div>
-                <!-- end of item -->
-
-                <!-- item -->
-                <div class="features-item">
-                    <span class="features-icon">
-                        <i class="fa-solid fa-volume-low"></i>
-                    </span>
-                    <h2 class = "features-title">
-                        Ambient Sound Control
-                    </h2>
-                    <p class = "text">
-                    Adjust ambient sound with the Sony | Headphones Connect app to cancel noise while still allowing essential sounds, like overhead announcements, through when you're listening on the move.
-                    </p>
-                </div>
-                <!-- end of item -->
-
-                <!-- item -->
-                <div class="features-item">
-                    <span class="features-icon">
-                        <i class="fa-brands fa-bluetooth-b"></i>
-                    </span>
-                    <h2 class = "features-title">
-                        Wireless freedom, premium sound
-                    </h2>
-                    <p class = "text">
-                    LDAC transmits approximately three times more data (at the maximum transfer rate of 990 kbps) than conventional BLUETOOTH® audio, allowing you to enjoy High-Resolution Audio content in exceptional quality, as close as possible to that of a dedicated wired connection.
-                    </p>
-                </div>
-                <!-- end of item -->
-            </div>
-        </div>
-    </section>
-    <!-- end of features -->
-
-    <!-- products -->
-    <section id="products" class="products">
-        <div class="container">
-            <div class="products-wrapper">
-                <h2 class="products-title"> Sony Product </h2>
-
-                <div class="products-item-wrapper">
-                    <!-- product item -->
-                    <div class="products-item">
-                        <img src="./images/Sony-WH-1000XM4-B.png" alt="product image">
-
-                        <div class="products-info">
-                            <h4>Sony HeadPhone</h4>
-                            <div class="ratings">
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-regular fa-star-half-stroke"></i></span>
-                            </div>
-                            <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black</p>
-                            <h4>Price: $350.00</h4>
-                        </div>
-
-                        <button type="button" class="new-btn">New</button>
-                        <button type="button" class="add-btn">Add to Cart</button>
+        <!-- features -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="features-wrapper">
+                    <!-- item -->
+                    <div class="features-item">
+                        <span class="features-icon">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </span>
+                        <h2 class="features-title">
+                            Industry-leading noise cancelation
+                        </h2>
+                        <p class="text">
+                            Industry-leading noise cancellation technology means you hear every word, note, and tune with incredible clarity, no matter your environment. These noise canceling headphones feature additional microphones that assist in isolating sound for a reduction of even more high and mid frequency sounds.
+                        </p>
                     </div>
-                    <!-- end of product item -->
+                    <!-- end of item -->
 
-                    <!-- product item -->
-                    <div class="products-item">
-                        <img src="./images/Sony-WH-1000XM4-W.png" alt="product image">
-
-                        <div class="products-info">
-                            <h4>Sony HeadPhone</h4>
-                            <div class="ratings">
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-solid fa-star"></i></span>
-                                <span><i class="fa-regular fa-star-half-stroke"></i></span>
-                            </div>
-                            <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black</p>
-                            <h4>Price: $350.00</h4>
-                        </div>
-
-                        <button type="button" class="new-btn">New</button>
-                        <button type="button" class="add-btn">Add to Cart</button>
+                    <!-- item -->
+                    <div class="features-item">
+                        <span class="features-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </span>
+                        <h2 class="features-title">
+                            Optimizing noise canceling
+                        </h2>
+                        <p class="text">
+                            To maximize noise-canceling performance, the WH-1000XM4 headphones incorporate two technologies: Personal Noise-Canceling Optimizer, designed specifically for you, and Atmospheric Pressure Optimizing, designed specifically for air travel.
+                        </p>
                     </div>
-                    <!-- end of product item -->
+                    <!-- end of item -->
 
+                    <!-- item -->
+                    <div class="features-item">
+                        <span class="features-icon">
+                            <i class="fa-solid fa-volume-low"></i>
+                        </span>
+                        <h2 class = "features-title">
+                            Ambient Sound Control
+                        </h2>
+                        <p class = "text">
+                        Adjust ambient sound with the Sony | Headphones Connect app to cancel noise while still allowing essential sounds, like overhead announcements, through when you're listening on the move.
+                        </p>
+                    </div>
+                    <!-- end of item -->
 
+                    <!-- item -->
+                    <div class="features-item">
+                        <span class="features-icon">
+                            <i class="fa-brands fa-bluetooth-b"></i>
+                        </span>
+                        <h2 class = "features-title">
+                            Wireless freedom, premium sound
+                        </h2>
+                        <p class = "text">
+                        LDAC transmits approximately three times more data (at the maximum transfer rate of 990 kbps) than conventional BLUETOOTH® audio, allowing you to enjoy High-Resolution Audio content in exceptional quality, as close as possible to that of a dedicated wired connection.
+                        </p>
+                    </div>
+                    <!-- end of item -->
                 </div>
-                
             </div>
-        </div>
-    </section>
-    <!-- end of products -->
+        </section>
+        <!-- end of features -->
 
-    <!-- order -->
-    <section class="order">
-        <div class="container">
-            <div class="order-wrapper">
-                <div class="order-img">
-                    <img src="./images/order-img.png" alt="order image">
-                </div>
-                <div class="order-content">
-                    <h2 class="order-title">music like you've never heard before</h2>
-                    <p class="text">Sony's intelligent noise-cancelling headphones with premium sound elevate your listening experience with the ability to personalize and control everything you hear. Get up to 30 hours of battery life with quick charging capabilities, enjoy an enhanced Smart Listening feature set, and carry conversations hands-free with speak-to-chat.</p>
-                    <button type="button" class="btn-trans order-button">Order Now</button>
+        <!-- products -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="products-wrapper">
+                    <h2 class="products-title"> Sony Product </h2>
+                    <div class="products-item-wrapper">
+                        <!-- product item -->
+                        <div class="products-item">
+                            <img src="./images/Sony-WH-1000XM4-B.png" alt="product image">
+                    
+                            <div class="products-info">
+                                <h4>Sony HeadPhone</h4>
+                                <div class="ratings">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                </div>
+                                <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black</p>
+                                <h4>Price: $350.00</h4>
+                            </div>
+                    
+                            <button type="button" class="new-btn">New</button>
+                            <button type="button" class="add-btn">Add to Cart</button>
+                        </div>
+                        <!-- end of product item -->
+                    
+                        <!-- product item -->
+                        <div class="products-item">
+                            <img src="./images/Sony-WH-1000XM4-W.png" alt="product image">
+                    
+                            <div class="products-info">
+                                <h4>Sony HeadPhone</h4>
+                                <div class="ratings">
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-solid fa-star"></i></span>
+                                    <span><i class="fa-regular fa-star-half-stroke"></i></span>
+                                </div>
+                                <p class="text">Sony WH-1000XM4 Wireless Industry Leading Noise Canceling Overhead Headphones with Mic for Phone-Call and Alexa Voice Control, Black</p>
+                                <h4>Price: $350.00</h4>
+                            </div>
+                    
+                            <button type="button" class="new-btn">New</button>
+                            <button type="button" class="add-btn">Add to Cart</button>
+                        </div>
+                        <!-- end of product item -->
+                    </div>
+                    
+                            
+                    
+                        
+                        
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- end of oreder -->
-
-    <!-- reviews -->
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <div class="reviews-wrapper center">
-                <button type="button" class="prev-btn center">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button type="button" class="next-btn center">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-                <!-- item -->
-                <div class="reviews-item active">
-                    <h2 class="reviews-title">reviews</h2>
-                    <p class = "text">"Noise cancellation and audio quality exceeded my expectations. If you can afford it, buy it. If you can not afford it, find a part time job so you can buy it."</p>
-                    <h3> - Sam Jordan -</h3>
-                </div>
-                <!-- end of item -->
-
-                <!-- item -->
-                <div class="reviews-item">
-                    <h2 class="reviews-title">reviews</h2>
-                    <p class = "text">"The bass is nice, clean, and punchy and the rest is pretty good for Bluetooth headphones. Noise cancellation and audio quality are top notch."</p>
-                    <h3> - Matt -</h3>
-                </div>
-                <!-- end of item -->
-
-                <!-- item -->
-                <div class="reviews-item">
-                    <h2 class="reviews-title">reviews</h2>
-                    <p class = "text">"Super comfortable. I am not an audiophile but these sounds amazing. Dual device connection is also great. Ambient Sound is also nice."</p>
-                    <h3> - Emily -</h3>
-                </div>
-                <!-- end of item -->
-
-                
-            </div>
-        </div>
-    </section>
-    <!-- end of reviews -->
-
-    <!-- newsletter -->
-    <section class = "newsletter center">
-        <div class = "container">
-            <div class = "newsletter-wrapper">
-                <h2 class = "newsletter-title">
-                Stay Connected
-                </h2>
-                <input type = "email" class = "form-control" placeholder="Your Email">
-                <button type = "submit" class = "btn-trans">Subscribe</button>
-            </div>
-        </div>
-    </section>
-    <!-- end of newsletter -->
-
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-wrapper">
-                <!-- links -->
-                <div>
-                    <ul class = "footer-links">
-                        <li><a href = "#">home</a></li>
-                        <li><a href = "#">benefits</a></li>
-                        <li><a href = "#">product</a></li>
-                        <li><a href = "#">reviews</a></li>
-                    </ul>
-                </div>
+        </section>
+        <!-- end of products -->
         
-                <div>
-                    <ul class = "footer-links">
-                        <li><a href = "#">shopping & returns</a></li>
-                        <li><a href = "#">store policy</a></li>
-                        <li><a href = "#">payment methods</a></li>
-                        <li><a href = "#">faq</a></li>
-                    </ul>
+        <!-- order -->
+        <section class="order">
+            <div class="container">
+                <div class="order-wrapper">
+                    <div class="order-img">
+                        <img src="./images/order-img.png" alt="order image">
+                    </div>
+                    <div class="order-content">
+                        <h2 class="order-title">music like you've never heard before</h2>
+                        <p class="text">Sony's intelligent noise-cancelling headphones with premium sound elevate your listening experience with the ability to personalize and control everything you hear. Get up to 30 hours of battery life with quick charging capabilities, enjoy an enhanced Smart Listening feature set, and carry conversations hands-free with speak-to-chat.</p>
+                        <button type="button" class="btn-trans order-button">Order Now</button>
+                    </div>
                 </div>
-        
-                <div>
-                    <ul class = "footer-links">
-                        <li><a href = "#">instagram</a></li>
-                        <li><a href = "#">youtube</a></li>
-                        <li><a href = "#">twitter</a></li>
-                        <li><a href = "#">amazon</a></li>
-                    </ul>
-                </div>
-                <!-- end of links -->
             </div>
+        </section>
+        <!-- end of oreder -->
 
-            <div class="footer-text">
-                <p class="text">&copy; 2024 by Ahmed Mohamed. Creative Studio Work</p>
+        <!-- reviews -->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <div class="reviews-wrapper center">
+                    <button type="button" class="prev-btn center">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button type="button" class="next-btn center">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <!-- item -->
+                    <div class="reviews-item active">
+                        <h2 class="reviews-title">reviews</h2>
+                        <p class = "text">"Noise cancellation and audio quality exceeded my expectations. If you can afford it, buy it. If you can not afford it, find a part time job so you can buy it."</p>
+                        <h3> - Sam Jordan -</h3>
+                    </div>
+                    <!-- end of item -->
+
+                    <!-- item -->
+                    <div class="reviews-item">
+                        <h2 class="reviews-title">reviews</h2>
+                        <p class = "text">"The bass is nice, clean, and punchy and the rest is pretty good for Bluetooth headphones. Noise cancellation and audio quality are top notch."</p>
+                        <h3> - Matt -</h3>
+                    </div>
+                    <!-- end of item -->
+
+                    <!-- item -->
+                    <div class="reviews-item">
+                        <h2 class="reviews-title">reviews</h2>
+                        <p class = "text">"Super comfortable. I am not an audiophile but these sounds amazing. Dual device connection is also great. Ambient Sound is also nice."</p>
+                        <h3> - Emily -</h3>
+                    </div>
+                    <!-- end of item -->
+
+                    
+                </div>
             </div>
-        </div>
-    </footer>
-    <!-- end of footer -->
-    <script src="./js/script.js"></script>
-</body>
+        </section>
+        <!-- end of reviews -->
+
+        <!-- newsletter -->
+        <section class = "newsletter center">
+            <div class = "container">
+                <div class = "newsletter-wrapper">
+                    <h2 class = "newsletter-title">
+                    Stay Connected
+                    </h2>
+                    <input type = "email" class = "form-control" placeholder="Your Email">
+                    <button type = "submit" class = "btn-trans">Subscribe</button>
+                </div>
+            </div>
+        </section>
+        <!-- end of newsletter -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <!-- links -->
+                    <div>
+                        <ul class = "footer-links">
+                            <li><a href = "#">home</a></li>
+                            <li><a href = "#">benefits</a></li>
+                            <li><a href = "#">product</a></li>
+                            <li><a href = "#">reviews</a></li>
+                        </ul>
+                    </div>
+            
+                    <div>
+                        <ul class = "footer-links">
+                            <li><a href = "#">shopping & returns</a></li>
+                            <li><a href = "#">store policy</a></li>
+                            <li><a href = "#">payment methods</a></li>
+                            <li><a href = "#">faq</a></li>
+                        </ul>
+                    </div>
+            
+                    <div>
+                        <ul class = "footer-links">
+                            <li><a href = "#">instagram</a></li>
+                            <li><a href = "#">youtube</a></li>
+                            <li><a href = "#">twitter</a></li>
+                            <li><a href = "#">amazon</a></li>
+                        </ul>
+                    </div>
+                    <!-- end of links -->
+                </div>
+
+                <div class="footer-text">
+                    <p class="text">&copy; 2024 by Ahmed Mohamed. Creative Studio Work</p>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+        <a href="#top" id="anchor-id" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+        <script src="./js/script.js"></script>
+    </body>
 </html>
