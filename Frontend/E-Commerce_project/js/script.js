@@ -71,3 +71,81 @@ nextBtn.addEventListener('click', function(){
     }
     showCurrentSlide(idCount);
 });
+
+
+// Check if the user is logged in
+const isLoggedIn = localStorage.getItem('isLoggedIn');
+const userFirstname = localStorage.getItem('userFirstname');
+
+const loginButton = document.getElementById('login-button');
+// const orderButtons = [document.getElementById('order-button'), document.getElementById('header-order-button')];
+const orderButtons = document.getElementsByClassName('order-button');
+console.log(orderButtons)
+// Convert the HTMLCollection to an array
+const orderButtonsArray = Array.from(orderButtons);
+
+    if (isLoggedIn) {
+        // Change the login button to a logout button with the user's name
+        loginButton.innerHTML = `<i class="fa-solid fa-circle-user"></i> Logout (${userFirstname})`;
+
+        // Logout functionality
+        loginButton.addEventListener('click', () => {
+            // Clear the user session (remove items from localStorage)
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userFirstname');
+
+            // Redirect to the home page
+            window.location.href = "index.html"; 
+        });
+
+        orderButtonsArray.forEach(button => {
+            button.addEventListener('click', () => {
+            window.location.href = "cart.html"; // Redirect to cart page if not logged in
+            });
+        });
+    } else {
+        // If the user is not logged in, redirect to the signup page when "Order Now" is clicked
+        orderButtonsArray.forEach(button => {
+            button.addEventListener('click', () => {
+            window.location.href = "signup.html"; // Redirect to signup page if not logged in
+            });
+        });
+
+        // Redirect to the login page when the login button is clicked
+        loginButton.addEventListener('click', () => {
+            window.location.href = "login.html"; // Redirect to login page
+        });
+}
+
+// // //////////////////////////////////////////////////////
+// const cartPageURL = "cart.html"; // Replace with your actual cart page URL
+
+// document.querySelectorAll('.add-btn').forEach(button => {
+//     button.addEventListener('click', (event) => {
+//         let productElement = event.target.parentElement;
+
+//         let product = {
+//             id: productElement.dataset.id,
+//             name: productElement.dataset.name,
+//             price: productElement.dataset.price,
+//             image: productElement.dataset.image,
+//             quantity: 1
+//         };
+
+//         addToCart(product);
+//         window.location.href = "cart.html"; // Redirect to cart page
+//     });
+// });
+
+// const addToCart = (product) => {
+//     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+//     let productIndex = cart.findIndex(item => item.id === product.id);
+
+//     if (productIndex === -1) {
+//         cart.push(product);
+//     } else {
+//         cart[productIndex].quantity += 1;
+//     }
+
+//     localStorage.setItem('cart', JSON.stringify(cart));
+// };

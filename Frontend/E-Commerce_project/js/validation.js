@@ -5,24 +5,72 @@ const password_input = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
 const error_message = document.getElementById('error-message')
 
+// form.addEventListener('submit', (e) => {
+//   let errors = []
+
+//   if(firstname_input){
+//     // If we have a firstname input then we are in the signup
+//     errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
+//   }
+//   else{
+//     // If we don't have a firstname input then we are in the login
+//     errors = getLoginFormErrors(email_input.value, password_input.value)
+//   }
+
+//   if(errors.length > 0){
+//     // If there are any errors
+//     e.preventDefault()
+//     error_message.innerText  = errors.join(". ")
+//   }
+// })
+
 form.addEventListener('submit', (e) => {
   let errors = []
 
   if(firstname_input){
     // If we have a firstname input then we are in the signup
     errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
-  }
-  else{
+
+    if(errors.length === 0){
+      const signupData = {
+        firstname: firstname_input.value,
+        email: email_input.value,
+        password: password_input.value
+      }
+      localStorage.setItem('signupData', JSON.stringify(signupData))
+      alert('Signup data stored successfully')
+    }
+  } else {
     // If we don't have a firstname input then we are in the login
     errors = getLoginFormErrors(email_input.value, password_input.value)
+
+    if(errors.length === 0){
+      const storedSignupData = JSON.parse(localStorage.getItem('signupData'));
+
+      // Check if email and password match the stored signup data
+      if(storedSignupData && storedSignupData.email === email_input.value && storedSignupData.password === password_input.value){
+        alert('Login successful')
+        
+        // Store login status or relevant data in localStorage
+        localStorage.setItem('isLoggedIn', true)
+        localStorage.setItem('userFirstname', storedSignupData.firstname)
+
+        // Redirect to the home page
+        window.location.href = 'index.html';
+      } else {
+        errors.push('Invalid email or password')
+        email_input.parentElement.classList.add('incorrect')
+        password_input.parentElement.classList.add('incorrect')
+      }
+    }
   }
 
   if(errors.length > 0){
-    // If there are any errors
     e.preventDefault()
-    error_message.innerText  = errors.join(". ")
+    error_message.innerText = errors.join(". ")
   }
 })
+
 
 function getSignupFormErrors(firstname, email, password, repeatPassword){
   let errors = []
