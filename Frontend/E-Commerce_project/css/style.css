@@ -253,8 +253,89 @@ img {
     background: #000;
 }
 
+/* order */
+.order {
+    padding: 5rem 0;
+    background: var(--emperor);
+}
+.order-img img {
+    width: 70%;
+    margin: 0 auto;
+}
+.order-content {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.order-title {
+    font-size: 2.2rem;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+.order .btn-trans {
+    margin-top: 1rem;
+}
+.order .btn-trans:hover {
+    background: #fff;
+    color: var(--emperor);
+}
 
-
+/* reviews */
+.reviews {
+    padding: 5rem 0;
+}
+.reviews-wrapper {
+    position: relative;
+    height: 400px;
+}
+.reviews-item {
+    text-align: center;
+    padding: 3rem;
+}
+.reviews-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.reviews .text {
+    font-size: 1rem;
+    color: var(--emperor);
+    margin: 2rem 0;
+}
+.reviews-item h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+.prev-btn,.next-btn {
+    position: absolute;
+    top: 50%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: var(--brown);
+    color: #fff;
+    transform: translateY(-50%);
+    transition: var(--transition);
+}
+.prev-btn {
+    left: 0;
+}
+.next-btn {
+    right: 0;
+}
+.prev-btn:hover,
+.next-btn:hover {
+    opacity: 0.8;
+}
+.reviews-item {
+    display: none;
+}
+.activeSlide {
+    display: block;
+}
 
 
 
@@ -292,6 +373,12 @@ img {
     .product-item .text{
         width: 60%;
     }
+    .reviews-item .text{
+        font-size: 1.1rem;
+    }
+    .reviews-item h3{
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -305,6 +392,20 @@ img {
     }
     .features-item:nth-child(odd) {
         border-right: 0.5px solid #fff;
+    }
+    .order-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+        align-items: center;
+    }
+    .order-content {
+        text-align: left;
+    }
+    .reviews-item .text{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }

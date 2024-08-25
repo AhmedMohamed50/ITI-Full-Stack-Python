@@ -23,3 +23,41 @@ window.addEventListener('resize', function() {
         document.body.classList.remove("resize-animation-stopper");
     }, 400);
 })
+
+
+// review slider 
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let idCount = 0;
+const reviewSlide = document.querySelectorAll('.reviews-item');
+
+showCurrentSlide(idCount);
+function showCurrentSlide(id){
+    hideAllSlide();
+    reviewSlide.forEach(function(item, idx){
+        if(id == idx){
+            item.classList.add('activeSlide');
+        }
+    });
+}
+
+function hideAllSlide(){
+    reviewSlide.forEach(function(item){
+        item.classList.remove('activeSlide');
+    })
+}
+
+prevBtn.addEventListener('click', function(){
+    idCount--;
+    if(idCount < 0){
+        idCount = reviewSlide.length - 1;
+    }
+    showCurrentSlide(idCount);
+});
+nextBtn.addEventListener('click', function(){
+    idCount++;
+    if(idCount == reviewSlide.length){
+        idCount = 0;
+    }
+    showCurrentSlide(idCount);
+});
