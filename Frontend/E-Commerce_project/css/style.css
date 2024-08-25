@@ -337,6 +337,75 @@ img {
     display: block;
 }
 
+/* newsletter */
+.newsletter {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/background-img-2.png) center/cover no-repeat fixed;
+    padding: 5rem 0;
+    text-align: center;
+}
+.newsletter-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.form-control{
+    font-size: 1rem;
+    background: transparent;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--brown);
+    color: var(--brown);
+    font-weight: 200;
+}
+.form-control::placeholder{
+    color: var(--brown);
+}
+.form-control:focus{
+    outline: none;
+}
+.form-control, .newsletter .btn-trans{
+    width: 100%;
+    margin: 1rem 0;
+}
+.newsletter .btn-trans{
+    background: var(--brown);
+    border-color: var(--emperor);
+    font-size: 1.1rem;
+}
+.newsletter .btn-trans:hover{
+    background: #fff;
+    color: var(--emperor);
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    background-color: #000;
+}
+.footer-wrapper {
+    padding: 5rem 0;
+}
+.footer-wrapper div{
+    margin: 2.5rem 0;
+}
+.footer-links li{
+    margin: 0.6rem 0;
+}
+.footer-links li a{
+    text-transform: uppercase;
+    font-weight: 200;
+    opacity: 0.9;
+    color: #f1f1f1;
+    transition: var(--transition);
+}
+.footer-links li a:hover {
+    color: var(--brown);
+}
+.footer-text {
+    padding: 1.1rem 0;
+}
+
 
 
 
@@ -375,9 +444,15 @@ img {
     }
     .reviews-item .text{
         font-size: 1.1rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .reviews-item h3{
         font-size: 1.2rem;
+    }
+    .newsletter .btn-trans , .form-control{
+        width: 70%;
     }
 }
 
@@ -407,7 +482,19 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
-
+    .newsletter .btn-trans , .form-control{
+        width: auto;
+    }
+    .form-control {
+        width: 400px;
+    }
+    .footer-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-wrapper div{
+        margin: 0;
+    }
 }
 
 
