@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staffs</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Staffs List</h1>
+    <ul>
+        {% for staff in staffs %}
+            <li>{{ staff.name }} - Department: {{ staff.department }}</li>
+        {% endfor %}
+    </ul>
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
+</body>
+</html>
